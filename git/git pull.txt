@@ -1,0 +1,1 @@
+如果本地有修改，执行add/commit操作后，执行git pull --rebase那么你当前的修改会是最后一笔，然后执行repo upload .就可以了，不需要担心本地修改会被冲掉

@@ -1,0 +1,9 @@
+生成OTA包的命令
+source build/ensetup.sh
+lunch 版本类型
+make otapackage
+
+target包生成路径：
+out/target/product/{机型名}/obj/PACKAGING/target_files_intermediates/***-target_files-eng.***.zip
+OTA包生成路径：
+out/target/product/{机型名}

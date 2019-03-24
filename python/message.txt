@@ -1,0 +1,35 @@
+message={"name":"yaoyuanchun","age":12,"number":[1,2,3,4,5],"money":{"yuan":[10,20,50,10],"dollar":[5,10,15,20]}}
+
+
+1. message_1 = ['yaoyuanchun'，12,[5,10,15,20]]
+
+	message_1 = [message['name'],message['age'],message['money']['dolor']]
+	
+	
+2.	message_2 = {'yaoyuanchun':{12:[10,20,50,10]}}
+	
+	message_2 = {message['name']:message['age']:message['money']['yuan']}
+	
+	
+3. message_3 = {12:{'yaoyuanchun':15}}     #这个15 是message 中 money 中 dollar 中 的15
+
+	message_3 = {message['age']:{message['name']:message['money']['dollar'][2]}}
+	
+	
+4. message={"name":"yaoyuanchun","age":12,"number":[1,2,3,4,5],"money":{"yuan":[10,20,50,10],"dollar":[5,10,15,20]}}
+	将message 字典 用json模块 写入到文件
+	
+	import json
+	
+	ff = open('test.json','w+')
+	json.dump(message,ff)
+	#json.dump(message,ff,indent=4) #和上面功能一样，格式化输出到文件。看起来会很好看
+	ff.close()
+	
+5. 从第四步的 test.json 中提取 message为一个字典 然后用提取出message 做 1 2 3 步
+
+	import json 
+	ff=open('test.json')
+	message = json.load(ff)
+	ff.close()
+	.............

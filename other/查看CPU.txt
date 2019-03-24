@@ -1,0 +1,2 @@
+#查看CPU核心数
+cat /proc/cpuinfo | grep "processor" | sort -u | wc -l
